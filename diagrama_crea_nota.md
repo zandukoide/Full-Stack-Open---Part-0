@@ -4,7 +4,7 @@ sequenceDiagram
     participant servidor
 
     navegador->>servidor: Enviar nota ['Esta es mi nueva nota'] con HTTP POST
-    servidor-->>navegador: Solicitar realizar HTTP GET a /notes
+    servidor->>navegador: Solicitar realizar HTTP GET a /notes
 
     Note right of servidor: Almacenar el valor de la nueva nota en 'new_notes' y redirigir el navegador a 'notes'
 
@@ -12,7 +12,7 @@ sequenceDiagram
     servidor-->>navegador: Código HTML de notes
 
     navegador->>servidor: Solicitar código CSS
-    servidor-->navegador: Código CSS
+    servidor-->>navegador: Código CSS
 
     navegador->>servidor: Solicitar código JS
     servidor-->>navegador: Código JS
